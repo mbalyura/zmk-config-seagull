@@ -2,14 +2,18 @@ include:
   - board: nice_nano
     shield: seagull
     artifact-name: seagull
+  # - board: nice_nano
+  #   shield: seagull
+  #   snippet: studio-rpc-usb-uart
+  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  #   artifact-name: seagull_studio
   - board: nice_nano
     shield: seagull
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: seagull_studio
-  - board: nice_nano
-    shield: seagull
-    cmake-args: -DCONFIG_ZMK_DISPLAY=y
-    artifact-name: seagull_display
+    snippet: zmk-usb-logging
+    artifact-name: seagull_debug
+  # - board: nice_nano
+  #   shield: seagull
+  #   cmake-args: -DCONFIG_ZMK_DISPLAY=y
+  #   artifact-name: seagull_display
   - board: nice_nano
     shield: settings_reset

@@ -4,7 +4,10 @@
 / {
 	chosen {
 		zephyr,display = &oled_128x64;
-		zmk,physical-layout = &default_layout;
+		// zmk,physical-layout = &default_layout;
+		zmk,kscan = &default_kscan;
+		zmk,matrix_transform = &default_transform;
+
 	};
 
 	default_transform: keymap_transform_0 {
