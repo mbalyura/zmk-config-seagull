@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define NUM 0
-#define NAV 0
-#define SYS 1
+#define NAV 1
+#define SYS 2
 
 / {
     keymap {
@@ -17,7 +17,7 @@
     // +------+------+------+------+
     // |   4  |   5  |   6  |   /  |
     // +------+------+------+------+-------+
-    // |   1  |   2  |   3  |   *  | L-BT  |
+    // |   1  |   2  |   3  |   *  | MUTE  |
     // +------+------+------+------+-------+
     // |   0  |   .  |  +   |   =  |
     // +------+------+------+------+
@@ -55,7 +55,7 @@
         &none           &none            &none            &none
         >;
 
-        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
     };
 
     layer_sys {
@@ -74,7 +74,7 @@
 
         &bt BT_CLR      &none         &none           &none
         &none           &none         &none           &none
-        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &none                     &studio_unlock
+        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &none                   &studio_unlock
         &none           &none         &none           &none
         >;
 
